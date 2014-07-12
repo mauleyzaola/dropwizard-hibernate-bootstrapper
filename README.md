@@ -1,6 +1,6 @@
 ####This bootstrapper has been tested to work on Linux, MacOS and Windows with PostgreSQL 9.3
 
-Since I am really no Java expert, I picked Dropwizard framework to work on an API web application. Is is much simplier
+Since I am really no Java expert, I picked Dropwizard framework to work on an API web application. It is much simplier
 to setup than J2EE, but still needs a little understanding of what's going on.
 
 In case you're wondering how this can be done easily, just follow these instructions bellow. Enjoy.
