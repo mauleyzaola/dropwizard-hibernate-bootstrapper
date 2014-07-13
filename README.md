@@ -24,5 +24,5 @@ mvn package
 java -jar target/dropwizard-bootstrapper-0.1.jar server configuration.yml
 ```
 
-The application should create all the tables and start the API at http://localhost:8080
+The application should create all the tables and start the API at [http://localhost:8080](http://localhost:8080)
 
