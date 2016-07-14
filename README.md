@@ -25,6 +25,3 @@ java -jar target/dropwizard-bootstrapper-0.1.jar server configuration.yml
 ```
 
 The application should create all the tables and start the API at [http://localhost:8080](http://localhost:8080)
-
-Here is an example on how to use it: https://www.dropbox.com/s/ix9bmmqjj3gmnxe/Screenshot%202015-06-18%2023.17.52.png?dl=0
-
