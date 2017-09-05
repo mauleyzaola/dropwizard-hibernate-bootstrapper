@@ -9,7 +9,7 @@ database:
   password: nevermind
 
   # the JDBC URL
-  url: jdbc:postgresql://localhost/mydatabase
+  url: jdbc:postgresql://localhost/dw
 
   # any properties specific to your JDBC driver:
   properties:
