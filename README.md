@@ -30,7 +30,13 @@ The application should create all the tables and start the API at [http://localh
 ### CURL Examples
 Insert country (id is auto generated, no need to pass it on the request)
 ```
-curl -XPUT -s --header "Content-Type:application/json"  http://localhost:8080/country -d'{"isoCode":"mx","name":"Mexico"}'
+$ curl -XPUT -s --header "Content-Type:application/json"  http://localhost:8080/country -d'{"isoCode":"mx","name":"Mexico"}' | jq .
+{
+  "id": "8b5db2c7-f503-427e-9a8e-3dabd1240437",
+  "name": "Mexico",
+  "isoCode": "MX",
+  "dateCreated": "2017-11-30T09:53:06.830-06:00",
+  "lastModified": null
 ```
 
 Select country
