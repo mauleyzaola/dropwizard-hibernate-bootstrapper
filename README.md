@@ -17,6 +17,11 @@ In case you're wondering how this can be done easily, just follow these instruct
 mvn package
 ```
 
+* Create database
+```
+psql -c "create database dw"
+```
+
 * Wait a while, Maven should download all the dependencies required on the pom.xml file
 * When it's done, just run Dropwizard
 
