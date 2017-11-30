@@ -25,3 +25,46 @@ java -jar target/dropwizard-bootstrapper-0.1.jar server configuration.yml
 ```
 
 The application should create all the tables and start the API at [http://localhost:8080](http://localhost:8080)
+
+
+### CURL Examples
+Insert country (id is auto generated, no need to pass it on the request)
+```
+curl -XPUT -s --header "Content-Type:application/json"  http://localhost:8080/country -d'{"isoCode":"mx","name":"Mexico"}'
+```
+
+Select country
+```
+~$ curl -s http://localhost:8080/country/8b5db2c7-f503-427e-9a8e-3dabd1240437
+{
+  "id": "8b5db2c7-f503-427e-9a8e-3dabd1240437",
+  "name": "Mexico",
+  "isoCode": "MX",
+  "dateCreated": "2017-11-30T09:41:28.176-06:00",
+  "lastModified": null
+}
+```
+
+Update country
+```
+~$ curl -XPOST -s --header "Content-Type:application/json"  http://localhost:8080/country/8b5db2c7-f503-427e-9a8e-3dabd1240437 -d'{"isoCode":"br","name":"Brazil"}' | jq .
+{
+  "id": "8b5db2c7-f503-427e-9a8e-3dabd1240437",
+  "name": "Brazil",
+  "isoCode": "BR",
+  "dateCreated": "2017-11-30T09:41:28.176-06:00",
+  "lastModified": "2017-11-30T09:45:27.321-06:00"
+}
+```
+
+Delete country
+```
+~$ curl -XDELETE -s --header "Content-Type:application/json"  http://localhost:8080/country/8b5db2c7-f503-427e-9a8e-3dabd1240437 | jq .
+{
+  "id": "8b5db2c7-f503-427e-9a8e-3dabd1240437",
+  "name": "Brazil",
+  "isoCode": "BR",
+  "dateCreated": "2017-11-30T09:41:28.176-06:00",
+  "lastModified": "2017-11-30T09:45:27.321-06:00"
+}
+```
